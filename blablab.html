@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MOSMON Universe</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* BODY */
+
+body{
+
+    background:
+    linear-gradient(to bottom,#162019,#223126,#2e4031);
+
+    color:#f7f2e8;
+
+    overflow-x:hidden;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#e0c07a;
+    border-radius:20px;
+}
+
+/* HERO */
+
+header{
+
+    width:100%;
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.30),rgba(0,0,0,0.60)),
+    url('https://i.ibb.co.com/Kpf3frjL/beauty-scene.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    position:relative;
+    overflow:hidden;
+}
+
+header::before{
+
+    content:'';
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    background:
+    radial-gradient(circle at center,
+    rgba(255,226,143,0.15),
+    transparent 60%);
+}
+
+/* HERO CONTENT */
+
+.hero{
+
+    position:relative;
+    z-index:2;
+
+    animation:fadeUp 1.5s ease;
+
+    padding:20px;
+}
+
+.hero h1{
+
+    font-size:110px;
+    font-weight:800;
+
+    color:#fff1b8;
+
+    text-shadow:
+    0 0 10px rgba(255,241,184,0.7),
+    0 0 25px rgba(255,223,120,0.5);
+
+    letter-spacing:8px;
+}
+
+.hero p{
+
+    margin-top:20px;
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    max-width:850px;
+
+    color:#f6f0df;
+}
+
+.hero button{
+
+    margin-top:35px;
+
+    padding:16px 40px;
+
+    border:none;
+    border-radius:18px;
+
+    background:#d8b56a;
+
+    color:#1d1407;
+
+    font-size:18px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:0.4s;
+
+    box-shadow:
+    0 0 25px rgba(216,181,106,0.4);
+}
+
+.hero button:hover{
+
+    transform:scale(1.08);
+
+    background:#ffe8a3;
+}
+
+/* SECTION */
+
+section{
+    padding:90px 10%;
+}
+
+/* TITLE */
+
+.title{
+
+    text-align:center;
+
+    font-size:52px;
+
+    margin-bottom:50px;
+
+    color:#ffe8a3;
+
+    text-shadow:
+    0 0 10px rgba(255,232,163,0.5);
+}
+
+/* CARDS */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+}
+
+.card{
+
+    background:
+    rgba(32,46,36,0.92);
+
+    border:
+    2px solid rgba(216,181,106,0.18);
+
+    border-radius:28px;
+
+    padding:28px;
+
+    transition:0.4s;
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#e0c07a;
+
+    box-shadow:
+    0 0 25px rgba(216,181,106,0.25);
+}
+
+.card h3{
+
+    color:#ffe8a3;
+
+    margin-bottom:15px;
+
+    font-size:28px;
+}
+
+.card p{
+
+    line-height:1.9;
+
+    color:#f0ead9;
+}
+
+/* LORE */
+
+.lore-box{
+
+    background:#243328;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    border:
+    2px solid rgba(216,181,106,0.15);
+
+    line-height:2.1;
+
+    font-size:18px;
+
+    color:#f6f0df;
+}
+
+/* CHAPTER */
+
+.chapter-container{
+
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+}
+
+.chapter{
+
+    background:
+    linear-gradient(135deg,#243328,#324739);
+
+    border-radius:30px;
+
+    padding:30px;
+
+    border:
+    2px solid rgba(216,181,106,0.15);
+
+    transition:0.4s;
+}
+
+.chapter:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#e0c07a;
+
+    box-shadow:
+    0 0 25px rgba(216,181,106,0.2);
+}
+
+/* BUTTON CHAPTER */
+
+.chapter-btn{
+
+    width:100%;
+
+    padding:22px;
+
+    background:#d8b56a;
+
+    color:#1f1708;
+
+    border:none;
+
+    border-radius:22px;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.chapter-btn:hover{
+
+    background:#ffe8a3;
+
+    transform:scale(1.02);
+}
+
+/* CONTENT */
+
+.chapter-content{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:0.6s ease;
+
+    background:#1c2921;
+
+    border-radius:20px;
+
+    margin-top:18px;
+
+    padding:0 25px;
+}
+
+.chapter-content p{
+
+    padding:28px 0;
+
+    line-height:2.1;
+
+    color:#f6f0df;
+
+    white-space:pre-line;
+}
+
+/* MUSIC BUTTON */
+
+#music-btn{
+
+    position:fixed;
+
+    bottom:20px;
+    right:20px;
+
+    padding:14px 22px;
+
+    border:none;
+    border-radius:18px;
+
+    background:#d8b56a;
+
+    color:#1d1407;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    z-index:999;
+
+    transition:0.3s;
+
+    box-shadow:
+    0 0 20px rgba(216,181,106,0.4);
+}
+
+#music-btn:hover{
+
+    transform:scale(1.08);
+
+    background:#ffe8a3;
+}
+
+/* FOOTER */
+
+footer{
+
+    margin-top:80px;
+
+    background:#121a14;
+
+    text-align:center;
+
+    padding:35px;
+
+    color:#b7b09d;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:60px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .title{
+        font-size:35px;
+    }
+
+    .chapter-btn{
+        font-size:18px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<header>
+
+<div class="hero">
+
+<h1>MOSMON</h1>
+
+<p>
+Dunia runtuh dalam satu getaran.
+Monster dari dimensi lain mulai muncul.
+Akechi, seorang anak bengkel,
+harus memulai perjalanan mencari
+Mosmon legendaris
+dan menghentikan organisasi Hexio Dimension.
+</p>
+
+<button onclick="window.location.href='#chapter'">
+Mulai Petualangan
+</button>
+
+</div>
+
+</header>
+
+<!-- KARAKTER -->
+
+<section>
+
+<h1 class="title">
+Karakter Utama
+</h1>
+
+<div class="cards">
+
+<div class="card">
+<h3>Akechi</h3>
+<p>
+Anak bengkel yang terseret ke dunia Mosmon
+setelah kehilangan keluarganya.
+</p>
+</div>
+
+<div class="card">
+<h3>Scrapknight</h3>
+<p>
+Evolusi dari Scrapbit.
+Ksatria metal dengan kemampuan tempur tinggi.
+</p>
+</div>
+
+<div class="card">
+<h3>Ben</h3>
+<p>
+Dokter hewan dari luar negeri
+yang memahami perilaku Mosmon.
+</p>
+</div>
+
+<div class="card">
+<h3>Riven</h3>
+<p>
+Trainer muda penuh semangat
+dengan partner listrik bernama Voltchi.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- LORE -->
+
+<section>
+
+<h1 class="title">
+Dunia MOSMON
+</h1>
+
+<div class="lore-box">
+
+<p>
+Mosmon adalah makhluk dari dimensi lain
+yang muncul setelah dunia diguncang bencana misterius.
+
+Mereka memiliki elemen,
+kemampuan,
+evolusi,
+dan energi inti unik.
+
+Manusia mulai membentuk kelompok trainer,
+menciptakan markas,
+dan menjelajahi dunia baru ini.
+
+Namun di balik semuanya,
+terdapat sembilan Mosmon legendaris
+yang dipercaya mampu mengubah keseimbangan dunia.
+</p>
+
+</div>
+
+</section>
+
+<!-- STORY -->
+
+<section id="chapter">
+
+<h1 class="title">
+Story Chapter
+</h1>
+
+<div class="chapter-container">
+
+<!-- BAB 1 -->
+
+<div class="chapter">
+
+<button class="chapter-btn">
+BAB 1 - Awal Dari Segalanya
+</button>
+
+<div class="chapter-content">
+
+<p>
+Akechi adalah seorang anak laki-laki yang bekerja di bengkel tua milik kakeknya, Zai. Bengkel itu berdiri di pinggir kota, berdebu, penuh alat besi tua, tapi menjadi satu-satunya tempat Akechi merasa punya rumah. Sejak kecil, ia sudah terbiasa mengotori tangan dengan oli dan besi.
+Ia hidup bersama kakak perempuannya, Azura, dan sang kakek. Kedua orang tuanya telah meninggal dalam sebuah kecelakaan misterius. Akechi tidak pernah tahu bagaimana detail kejadian itu. Semua terasa seperti bagian hidupnya yang direnggut tanpa penjelasan.
+Hari itu seharusnya berjalan normal.
+Akechi sedang berada di rumah, membersihkan sisa besi dan plastik bekas untuk dirakit ulang, ketika tiba-tiba getaran dahsyat mengguncang dunia. Dinding rumah berderak, benda-benda jatuh, tanah seolah berteriak.
+“Apa-apaan ini…?” gumamnya panik.
+Tanpa pikir panjang, Akechi berlari menuju bengkel. Asap tipis mengepul dari arah sana. Jantungnya berdegup liar.
+“Azura!” teriaknya.
+Begitu sampai, bengkel itu sudah porak-poranda. Rak besi roboh, alat-alat berserakan. Di tengah reruntuhan itu, Azura tergeletak tak bergerak.
+Akechi berlutut, mengguncang tubuh kakaknya.
+“Tidak… tidak… aku telat…”
+Air mata jatuh tanpa bisa ditahan.
+“Kalau aku lebih cepat… kalau aku ada di sini… Kak pasti masih hidup…”
+Saat itulah, sebuah suara asing menggema di kepalanya.
+“Hey, bocah bodoh. Aura milikmu… cukup menarik.”
+Akechi terkejut, menoleh ke sekeliling.
+“Siapa?! Keluar!”
+“Tak perlu tahu siapa aku. Yang penting… kau ingin kakakmu kembali, bukan?”
+Tubuh Akechi menegang.
+“Apa maksudmu…?”
+“Ikuti perintahku. Selesaikan misiku. Sebagai gantinya, semua permintaanmu akan kukabulkan. Menghidupkan kakakmu? Itu perkara mudah.”
+Akechi mengepalkan tangan.
+“Kalau kau bohong, apa jaminannya?”
+“Jika aku berbohong, kau boleh membunuhku. Tapi untuk bisa melakukannya… kau harus menyelesaikan misiku. Aku pastikan, pada akhirnya kau akan bertemu denganku.”
+Hening sejenak.
+Akechi menghela napas panjang.
+“…Baik. Apa yang harus aku lakukan?”
+Sebuah benda muncul di hadapannya: sebuah screwdriver aneh dengan simbol bercahaya, dan sebuah gelang logam gelap yang melayang pelan sebelum mengunci sendiri di pergelangan tangan Akechi.
+“Ambil itu,” kata suara itu.
+“Screwdriver akan membantumu membaca makhluk-makhluk yang muncul di dunia ini. Elemen mereka. Sifat mereka. Tapi alat itu terbatas. Kau hanya bisa menggunakannya sepuluh kali dalam sehari.”
+Akechi menatap gelang di tangannya. Permukaannya halus, dingin, dengan garis cahaya tipis yang berdenyut pelan.
+“Lalu ini?” tanyanya.
+“Itu Astra Link,” jawab suara itu.
+“Bukan bola. Bukan wadah. Tapi ikatan. Dengan itu, kau bisa mengikat Mosmon yang kau taklukkan. Mereka akan masuk ke dalam sistem gelang itu. Tapi jangan salah paham.”
+Nada suaranya mengeras.
+“Mosmon bukan benda. Mereka tidak bisa dipaksa. Kalau mereka menolakmu, Astra Link akan menolakku lebih dulu.”
+“Terus… buat apa aku melakukan semua ini?” tanya Akechi.
+“Apa kau bodoh, atau belum sadar dunia ini sudah berubah?” ejek suara itu.
+“Monster kini bermunculan. Kau bisa menangkap mereka, menjadikannya peliharaan sekaligus senjata. Rawat mereka. Latih mereka.”
+Sosok itu terdiam sejenak.
+“Kau harus berpetualang dan menemukan tujuh Mosmon legendaris. Hanya dengan itu, gerbang menuju diriku akan terbuka.”
+“Waktumu terbatas,” lanjutnya.
+“Bergeraklah.”
+“…Siapa namamu?”
+“Panggil aku Gon.”
+
+Dunia tidak berubah secara perlahan.
+Ia runtuh dalam satu getaran.
+Bengkel tua milik Zai masih berdiri setengah roboh. Besi-besi berjatuhan, kaca pecah berserakan, dan debu memenuhi udara. Akechi berdiri terpaku di tengah kekacauan itu, menggenggam sebuah screwdriver aneh yang terasa hangat di tangannya.
+Bentuknya tidak seperti alat bengkel biasa. Gagangnya hitam kusam dengan garis cahaya tipis berwarna biru yang berdenyut pelan, seolah hidup.
+“Ini bukan alat biasa…” gumam Akechi.
+Suara itu kembali terdengar, pelan tapi jelas, langsung di kepalanya.
+“Itu Screwdriver Sistemik. Alat pertama yang kau butuhkan untuk bertahan hidup.”
+Akechi mengepalkan tangan.
+“Jadi fungsi benda ini apa sebenarnya, Gon?”
+Cahaya di ujung screwdriver menyala, memproyeksikan simbol melingkar ke udara.
+“Screwdriver itu berfungsi sebagai pemindai Mosmon.
+Ia bisa membaca elemen, sifat dasar, dan potensi tempur setiap Mosmon yang kau temui.”
+Gon berhenti sejenak, lalu melanjutkan dengan nada mengejek.
+“Tanpa itu, kau cuma bocah bengkel yang sok berani.”
+Akechi mengabaikan ejekan itu. Ia mengangkat screwdriver, mengarahkannya ke bangkai mesin yang bergerak aneh di sudut bengkel. Cahaya biru menyapu objek itu, dan tulisan asing muncul di udara.
+[MOSMON TERDETEKSI]
+Elemen: Logam
+Sifat: Agresif, Tidak Stabil
+Jantung Akechi berdetak lebih cepat.
+“Jadi… dunia ini beneran berubah,” katanya pelan.
+“Akhirnya kau paham,dan satu lagi alat ini tidak sembarang dipakai, secanggih canggihnya alat pasti ada kekurangannya”gon yang menjelskan dengan nada tegas.
+“memang apa kekurangannya?”akechi yang binggung oleh perkataan gon.
+“eh bocoh bodoh denger yah gw jelasin sejelas jelas nya alat ini memiliki kekurangan ya itu batas”gon menjelaskan dengan nada kencang
+“batasan??”akechi yang kebinggungan 
+“iya batasan jadi lu Cuma bisa scan mosmon liar sebanyak 10 kali dalam sehari”gon menjelaskan 
+“oh jadi gw  Cuma bisa pakek 10 doang”jawab akechi dengan nada sok tahu
+“iya bodoh,jadi manfaatin dengan baik 
+Gon lalu menjatuhkan sebuah gelang aneh kecil ke tangan Akechi.
+“Ini astral link”
+“gelang berfungsi sebagai wadah energi Mosmon yang berhasil kau tangkap.
+Di dalamnya, Mosmon tidak tidur. Mereka disimpan dalam bentuk energi stabil.”
+Akechi menatap gelang yang ada ditangan nya.
+“Kalau rusak?”
+“Mosmon di dalamnya lenyap. Jadi jangan ceroboh.”
+“Terus… Mosmon legendaris?”
+Udara di sekitarnya terasa lebih berat.
+“Berbeda.”
+Cahaya di sekitar Gon membentuk siluet cincin bercahaya.
+“Setiap Mosmon Legendaris memiliki Enkiring
+Itu adalah wadah khusus, hanya bisa digunakan oleh Pilar, pemilik sah Mosmon Legendaris.”
+Gon berhenti, lalu berkata pelan namun tegas.
+“Jika kau berhasil mendapatkan Mosmon Legendaris,
+Enkiring nya akan muncul bersamaan dengannya.
+Tidak bisa dibuat. Tidak bisa dicuri.”
+Akechi menelan ludah.
+“Jadi… screwdriver buat membaca, astral link buat menyimpan, dan enkiring cuma buat yang terpilih.”
+“Tepat.”
+Gon tertawa kecil.
+“Sekarang kau mengerti kenapa dunia ini tidak lagi cocok untuk orang lemah.”
+Akechi menatap keluar bengkel. Jalanan retak, bangunan runtuh, dan suara makhluk asing menggema dari kejauhan.
+Ia mengepalkan screwdriver itu lebih erat.
+“Aku nggak peduli dunia ini mau jadi apa,” katanya pelan.
+“Aku cuma mau satu hal.”
+Suara Gon terdengar puas.
+“Maka bergeraklah.
+Waktumu sudah berjalan.”
+Dan di hari itulah,
+seorang anak bengkel berhenti menjadi manusia biasa.
+</p>
+
+</div>
+
+</div>
+
+<!-- BAB 2 -->
+
+<div class="chapter">
+
+<button class="chapter-btn">
+BAB 2 - Suara dari Dimensi Lain
+</button>
+
+<div class="chapter-content">
+
+<p>
+Angin sore berhembus pelan di halaman belakang rumah Akechi.
+Langit mulai berubah jingga ketika Akechi duduk di atas batu besar sambil memutar screwdriver di tangannya. Ia masih mencoba memahami semua yang terjadi sejak kemarin.
+Dunia yang tiba-tiba dipenuhi makhluk bernama Mosmon.
+Dan suara misterius yang bisa berbicara langsung di pikirannya.
+Akechi menghela napas.
+“Apa aku benar-benar tidak gila…?”
+Tiba-tiba suara itu muncul lagi.
+“Kamu masih meragukannya?”
+Akechi langsung menegakkan badan.
+“Gon.”
+Suara itu terdengar tenang seperti biasa.
+“Aku pikir kamu sudah mulai terbiasa.”
+Akechi menatap langit.
+“Aku masih belum bisa melihatmu.”
+“Belum saatnya.”
+Jawaban Gon singkat, seperti selalu menyimpan sesuatu.
+Beberapa detik mereka terdiam.
+Akechi akhirnya bertanya,
+“Kalau dunia ini benar-benar berubah… berarti Mosmon akan terus muncul?”
+“Ya.”
+“Dan manusia akan mulai menangkap mereka?”
+“Itu juga tidak bisa dihindari.”
+Akechi memutar screwdriver lagi.
+“Berarti dunia ini bakal kacau.”
+Gon tertawa pelan di dalam pikirannya.
+“Tidak selalu.”
+“Kekacauan sering kali hanya awal dari keseimbangan baru.”
+Akechi tidak langsung menjawab.
+Di kejauhan terdengar suara sesuatu bergerak di antara semak-semak.
+Seekor Mosmon kecil melompat keluar. Bentuknya seperti campuran kadal dan mesin kecil.
+Makhluk itu menatap Akechi dengan hati-hati.
+Akechi mengangkat screwdriver dan memindainya.
+Cahaya scan muncul sebentar.
+Data sederhana muncul di layar kecil alat itu.
+Mosmon itu terlihat waspada lalu cepat berlari kembali ke semak-semak.
+Akechi menurunkan alatnya.
+“Makhluk seperti itu sekarang ada di mana-mana…”
+“Dan itu baru permulaan.”
+Suara Gon terdengar lebih serius sekarang.
+“Dunia Mosmon jauh lebih luas dari yang kamu lihat sekarang.”
+Akechi mengangkat alis.
+“Lebih luas?”
+“Ada banyak jenis Mosmon.”
+“Ada yang lemah.”
+“Ada yang sangat kuat.”
+“…dan ada yang legendaris.”
+Akechi langsung tertarik.
+“Mosmon legendaris?”
+Gon tidak langsung menjawab.
+Seolah memilih kata-katanya dengan hati-hati.
+“Makhluk yang kekuatannya bahkan bisa mempengaruhi dunia.”
+Akechi terdiam.
+Angin sore kembali berhembus.
+Pikiran Akechi mulai dipenuhi banyak pertanyaan baru.
+Kalau makhluk seperti itu benar-benar ada…
+Apa yang akan terjadi jika manusia menemukannya?
+Atau lebih buruk lagi…
+Mencoba mengendalikannya.
+Gon akhirnya berbicara lagi.
+“Akechi.”
+“Ya?”
+“Kamu akan menghadapi banyak hal yang belum kamu pahami.”
+“Tapi satu hal yang harus kamu ingat.”
+Suara Gon menjadi lebih dalam.
+“Dunia Mosmon bukan hanya tentang kekuatan.”
+“Ini tentang ikatan.”
+Akechi menatap tangannya.
+Ia tidak sepenuhnya mengerti maksud kata-kata itu.
+Tapi entah kenapa…
+Ia merasa perjalanan panjangnya baru saja dimulai.
+</p>
+
+</div>
+
+</div>
+
+<!-- BAB 3 -->
+
+<div class="chapter">
+
+<button class="chapter-btn">
+BAB 3 - Aturan yang Tidak Tertulis
+</button>
+
+<div class="chapter-content">
+
+<p>
+Malam turun perlahan, tapi dunia tidak kembali tenang.
+Akechi duduk di lantai bengkel tua, menatap astral link di tangannya. Scrapbit tidak mengeluarkan suara apa pun, tapi screwdriver di sisi Akechi terus berdenyut pelan, seolah mengingatkan bahwa Mosmon itu belum sepenuhnya miliknya.
+“Kenapa dibilang terikat sementara?” tanya Akechi akhirnya.
+Gon tidak langsung menjawab. Suaranya muncul setelah jeda yang terlalu panjang.
+“Karena Mosmon bukan benda. Dunia ini punya aturan, meski tidak tertulis.”
+Cahaya samar muncul di ujung screwdriver. Bukan tulisan penuh, hanya potongan informasi yang muncul dan menghilang, seperti ingatan yang dipaksakan.
+Akechi mulai memahami lewat potongan pengalaman, bukan penjelasan utuh.
+Mosmon hanya bisa dimiliki dalam batas tertentu. Semakin banyak Mosmon yang dimiliki seseorang, semakin berat beban energinya. Jika melebihi batas, Mosmon akan saling menolak, bahkan bisa lepas kendali.
+“Karena itu,” kata Gon, “manusia membangun markas. Tempat Mosmon beristirahat, menstabilkan energi, dan tumbuh. Tanpa itu, Mosmon akan melemah… atau mengamuk.”
+Akechi menatap sekeliling bengkel. Tua, rusak, tapi masih berdiri.
+“Tempat ini… bisa dipakai?”
+“Bisa,” jawab Gon. “Kalau kau memperbaikinya.”
+Screwdriver kembali bereaksi. Ketika Akechi menyentuh dinding bengkel yang retak, alat itu memancarkan cahaya kuning redup. Logam yang bengkok perlahan kembali lurus. Kayu yang patah menyatu kasar, tidak sempurna, tapi cukup kokoh.
+Bukan sihir. Lebih seperti pemaksaan bentuk.
+“Alat ini bukan cuma untuk membaca,” kata Gon. “Ia diciptakan untuk membangun dunia yang runtuh. Tapi jangan salah. Setiap perbaikan menguras tenagamu.”
+Akechi tersandar, napasnya berat. Bengkel itu perlahan berubah fungsi. Bukan lagi sekadar tempat kerja, tapi markas pertama. Tempat Mosmon bisa keluar dari botball tanpa kehilangan kendali.
+Scrapbit akhirnya dimunculkan. Tubuh kecilnya bergerak kaku, matanya waspada. Ia tidak menyerang, tapi juga tidak mendekat.
+“Mosmon agresif butuh ruang,” ujar Gon. “Dan aturan.”
+Akechi mengangguk pelan. Untuk pertama kalinya, ia sadar. Dunia ini bukan soal menangkap sebanyak mungkin. Ini soal bertahan tanpa melanggar batas.
+Ketika malam semakin larut, suara langkah terdengar dari luar pagar bengkel.
+Akechi refleks berdiri. Scrapbit menggeram pelan.
+Seorang pria muncul dari balik gelap. Mantel panjang, tas besar di punggungnya, wajahnya terlihat lelah. Tangannya terangkat perlahan, memberi tanda tidak bermusuhan.
+“Tenang,” katanya dengan aksen asing yang samar. “Aku tidak tahu apa yang terjadi di desa ini.”
+Akechi menatapnya curiga. “Siapa kamu?”
+Pria itu menarik napas panjang.
+“Namaku Ben. Dokter hewan.”
+“Dokter… hewan?” Akechi mengernyit.
+Ben tersenyum tipis, tapi matanya gelisah.
+“Aku baru tiba dari luar negeri. Kapal terakhir sebelum semuanya kacau. Di tempatku, dunia belum berubah sejauh ini.”
+Ia menoleh ke Scrapbit, lalu ke botball di tangan Akechi. Tatapannya berubah. Bukan takut. Tertarik.
+“Itu bukan hewan biasa,” kata Ben pelan. “Dan kau bukan orang biasa.”
+Akechi belum sempat menjawab ketika Gon berbisik, suaranya rendah.
+“Hati-hati. Orang ini tidak berbohong… tapi ia juga belum mengatakan semuanya.”
+Ben melangkah lebih dekat, menjaga jarak aman.
+“Bolehkah aku bertanya?” ujarnya. “Sejak kapan makhluk-makhluk ini ada? Dan kenapa dunia berubah secepat ini?”
+Akechi terdiam.
+Di antara bengkel yang setengah diperbaiki, Mosmon agresif yang belum sepenuhnya jinak, dan pria asing yang terlalu tenang untuk situasi seperti ini, Akechi merasakan satu hal dengan jelas:
+dunia ini tidak hanya runtuh. Ia sedang disusun ulang.
+Dan tidak semua orang datang tanpa tujuan.
+</p>
+
+</div>
+
+</div>
+
+<!-- BAB 4 -->
+
+<div class="chapter">
+
+<button class="chapter-btn">
+BAB 4 - Pagi yang Tidak Biasa
+</button>
+
+<div class="chapter-content">
+
+<p>
+Pagi di desa itu terasa aneh.
+Biasanya suara pertama yang terdengar hanyalah denting alat bengkel milik kakek Zai atau langkah orang lewat menuju pasar. Tapi sekarang ada suara lain. Bunyi gesekan logam kecil yang berjalan mondar-mandir di lantai bengkel.
+Akechi membuka mata dengan malas.
+Ia sempat lupa apa yang terjadi semalam. Dunia yang berubah. Mosmon liar. Scrapbit.
+Lalu ia melihat sesuatu di dekat kakinya.
+Makhluk kecil berbentuk logam itu sedang mencoba menggigit baut yang tergeletak di lantai.
+“...Serius?” gumam Akechi.
+Scrapbit mengangkat kepalanya. Mata kuningnya berkedip dua kali, lalu ia mengeluarkan suara kecil seperti mesin yang baru dinyalakan.
+Akechi menghela napas panjang.
+“Jadi sekarang aku punya… peliharaan mesin?”
+Scrapbit tidak menjawab. Ia justru berjalan ke arah tumpukan besi tua dan mulai mengendus-endusinya seperti anjing yang mencari makanan.
+Di pergelangan tangan Akechi, Astra Link berdenyut pelan.
+Suara Gon muncul lagi.
+“Mosmon level rendah sering memiliki naluri sederhana. Scrapbit menyukai logam. Jika kau membiarkannya, ia mungkin akan memakan setengah bengkel ini.”
+Akechi langsung bangun.
+“Oi! Jangan makan itu! Itu buat perbaikan motor!”
+Scrapbit berhenti, menoleh, lalu menjatuhkan baut yang hampir digigitnya.
+Untuk beberapa detik, mereka hanya saling menatap.
+Akechi akhirnya duduk di lantai.
+“Aku bahkan belum siap punya kucing… sekarang aku punya monster.”
+Gon tertawa kecil di kepalanya.
+“Selamat datang di dunia barumu.”
+Akechi memandang sekeliling bengkel yang rusak. Cahaya matahari masuk melalui celah dinding yang retak. Debu masih menempel di udara.
+Namun untuk pertama kalinya sejak kejadian kemarin, suasananya tidak terasa sepenuhnya kosong.
+Scrapbit berjalan mendekat, lalu duduk di sampingnya.
+Akechi menghela napas.
+“Baiklah… kalau kau memang ikut denganku…”
+Ia mengambil potongan besi kecil dari lantai dan melemparkannya.
+Scrapbit langsung mengejar dengan semangat.
+Akechi tidak bisa menahan senyum kecil.
+“Latihan pertama kita… jangan makan bengkel.”
+Langit malam terasa aneh bagi Akechi.
+Ia sedang duduk sendirian di tempat latihan, napasnya masih berat setelah latihan panjang. Angin malam bergerak pelan, membawa rasa dingin yang aneh.
+Tiba-tiba suara yang sangat ia kenal muncul di kepalanya.
+“Sepertinya waktuku tidak banyak lagi.”
+Itu suara Gon.
+Seperti biasa, Akechi tidak melihat tubuhnya. Gon tidak pernah menunjukkan wujudnya. Hubungan mereka hanya melalui Astral Link, ikatan batin yang membuat suara Gon muncul langsung di pikirannya.
+“Apa maksudmu?” gumam Akechi pelan.
+Gon tidak langsung menjawab. Suaranya terdengar lebih serius dari biasanya.
+“Akechi… sebelum koneksi ini melemah, ada sesuatu yang harus kamu tahu. Tentang sembilan Mosmon legendaris.”
+Akechi langsung fokus.
+“Mosmon biasa punya kekuatan besar,” lanjut Gon,
+“tapi Mosmon legendaris berada di tingkat yang berbeda. Mereka bukan sekadar kuat… mereka adalah penjaga keseimbangan dunia Mosmon.”
+Suasana terasa semakin sunyi.
+“Setiap Mosmon legendaris punya wujud yang sangat khas,” kata Gon.
+Ia mulai menjelaskan satu per satu.
+Gon menggambarkan sosok Mosmon pertama. Tubuhnya besar, sisiknya berkilau seperti logam, dengan mata yang memancarkan kekuatan kuno.
+Mosmon kedua berbeda jauh. Tubuhnya ramping, bergerak seperti bayangan, dengan sayap yang tampak seperti kabut malam.
+Mosmon ketiga memiliki tubuh raksasa yang dipenuhi energi alam, seperti makhluk yang lahir langsung dari bumi.
+Satu demi satu Gon menggambarkan sembilan Mosmon legendaris, masing-masing dengan bentuk yang unik, aura yang berbeda, dan kekuatan yang hampir mustahil ditandingi.
+Akechi mendengarkan dengan serius. Ia mencoba membayangkan setiap makhluk yang dijelaskan Gon.
+“Mosmon legendaris tidak bisa ditangkap dengan cara biasa,” lanjut Gon.
+“Kamu hanya bisa membuat kontrak dengan mereka. Dan saat kontrak itu terjadi…”
+Gon berhenti sejenak.
+“…kamu akan mendapatkan Enkiring.”
+Akechi langsung mengangkat kepala.
+“Enkiring?”
+“Ya. Itu bukan sekadar alat penangkap. Enkiring adalah bukti kontrak antara manusia dan Mosmon legendaris. Hanya mereka yang diakui oleh Mosmon legendaris yang bisa memilikinya.”
+Suara Gon mulai terdengar sedikit terdistorsi.
+Akechi langsung menyadarinya.
+“Gon…? Kenapa suaramu…”
+Astral Link mereka mulai bergetar.
+“Sepertinya… koneksi kita mulai melemah.”
+Nada suara Gon berubah lebih serius.
+“Akechi… dengarkan aku.”
+Getaran di kepala Akechi semakin kuat.
+“Kamu harus menjadi lebih kuat.”
+Suara Gon mulai terputus-putus.
+“Cari informasi tentang… sembilan Mosmon legendaris itu.”
+“Dan suatu hari… temukan mereka.”
+Akechi mencoba memanggilnya.
+“Gon! Tunggu—”
+Tapi suara Gon semakin jauh.
+Pesan terakhirnya terdengar samar di dalam pikiran Akechi.
+“Jangan berhenti berlatih… Akechi.”
+Lalu…
+Astral Link mereka terputus.
+Sunyi.
+Tidak ada suara lagi di kepala Akechi.
+Hanya angin malam yang berhembus pelan.
+Akechi mengepalkan tangannya.
+“Sembilan Mosmon legendaris…”
+Ia menatap langit malam.
+“Baiklah, Gon.”
+</p>
+
+</div>
+
+</div>
+
+<!-- BAB 5 -->
+
+<div class="chapter">
+
+<button class="chapter-btn">
+BAB 5 - Bayangan di Balik Dunia
+</button>
+
+<div class="chapter-content">
+
+<p>
+Lima bulan telah berlalu sejak hubungan antara Akechi dan Gon terputus secara tiba-tiba.
+Sejak hari itu, tidak pernah lagi terdengar suara Gon melalui Astra Link. Tidak ada petunjuk, tidak ada pesan, bahkan tidak ada tanda bahwa entitas misterius itu masih mengawasinya.
+Awalnya Akechi merasa seperti ditinggalkan di tengah dunia yang belum ia pahami.
+Namun waktu tidak berhenti.
+Dunia yang berubah ini tidak memberi kesempatan bagi orang yang hanya menunggu.
+Setiap hari, Akechi berlatih.
+Di tanah lapang dekat desa, denting logam sering terdengar sejak pagi. Scrapbit bergerak cepat di antara puing-puing besi dan batu, menyerang target latihan yang dibuat Akechi dari sisa logam bengkel.
+Mosmon kecil itu kini jauh berbeda dari pertama kali ditangkap.
+Tubuh logamnya terlihat lebih kokoh, cakar besinya lebih tajam, dan gerakannya jauh lebih stabil.
+“Lebih cepat,” kata Akechi sambil mengangkat screwdriver miliknya.
+Cahaya tipis muncul dari ujung alat itu.
+[SCAN AKTIF]
+ 
+Elemen: Metal
+Level: 6
+Status: Stabil
+Scrapbit menggeram kecil, seolah bangga.
+Akechi tersenyum tipis.
+Selain berlatih, ia juga tidak sendirian lagi.
+Ben masih tinggal di desa dan sering membantu merawat Mosmon liar yang terluka. Pengetahuannya sebagai mantan dokter hewan ternyata sangat berguna di dunia yang dipenuhi makhluk baru seperti Mosmon.
+Beberapa minggu lalu Ben bahkan berhasil mendapatkan Mosmon miliknya sendiri.
+Mosmon itu bernama Florantis.
+Tipe daun, dengan tubuh menyerupai rusa hutan. Dari punggungnya tumbuh daun besar yang berfungsi seperti pelindung alami, dan setiap langkahnya mampu menumbuhkan akar kecil dari tanah.
+Florantis bukan tipe petarung agresif.
+Namun kemampuannya mengendalikan tanaman membuatnya sangat kuat dalam pertahanan dan penyembuhan.
+Meski begitu, satu hal tetap belum berubah.
+Mereka masih tidak menemukan informasi apa pun tentang sembilan Mosmon Legendaris.
+Seolah makhluk itu hanya cerita yang dibisikkan oleh dunia.
+Suatu pagi, saat latihan rutin, Akechi berjalan lebih jauh dari biasanya.
+Kabut tipis menyelimuti perbukitan kecil di luar desa. Scrapbit mengikuti di belakangnya, sesekali mencakar tanah berbatu.
+“Coba serang batu itu,” kata Akechi.
+Scrapbit melompat.
+Cakar logamnya menghantam batu hingga retak.
+Akechi mengangguk puas.
+Namun saat ia hendak memberi perintah berikutnya, suara percakapan terdengar dari balik pepohonan.
+Suara orang.
+Bukan warga desa.
+Akechi langsung menahan langkah dan bersembunyi di balik batang pohon besar.
+Di sebuah tanah lapang kecil berdiri beberapa orang berpakaian rapi.
+Setelan hitam.
+Sepatu mengilap.
+Di dada mereka terdapat lambang aneh berbentuk lingkaran dengan garis-garis tajam.
+Di bawahnya tertulis satu nama.
+HEXIO DIMENSION
+Salah satu pria membuka perangkat hologram kecil.
+Di udara muncul gambar bentuk-bentuk Mosmon yang berbeda.
+“Energi Mosmon biasa saja sudah cukup stabil,” kata pria itu.
+“Namun yang kita butuhkan adalah inti energi Mosmon Legendaris.”
+Pria lain menyilangkan tangan.
+“Jika kita bisa mengekstrak inti energi mereka, kita bisa menciptakan reaktor dimensi.”
+“Reaktor itu akan membuka gerbang antar dunia secara permanen.”
+Akechi menegang.
+Ia tidak sepenuhnya mengerti maksud mereka.
+Namun satu hal jelas.
+Mereka ingin menangkap Mosmon Legendaris.
+Bukan untuk dilindungi.
+Tapi untuk dijadikan sumber energi eksperimen.
+Pria tertua dalam kelompok itu lalu berkata pelan,
+“Masalahnya hanya satu.”
+“Kita belum tahu di mana Mosmon Legendaris berada.”
+Ia tersenyum tipis.
+“Tapi kita tidak perlu mencari mereka.”
+“Cukup cari manusia yang suatu hari akan membuat kontrak dengan mereka.”
+Jantung Akechi berdetak lebih keras.
+Ia perlahan mundur tanpa membuat suara.
+Scrapbit juga ikut bergerak diam-diam di belakangnya.
+Sore harinya Akechi menceritakan semuanya kepada Ben.
+Ben terlihat jauh lebih serius dari biasanya.
+Florantis berdiri di sampingnya, daun di punggungnya bergerak pelan tertiup angin.
+“Jika mereka benar-benar bisa menggunakan energi Mosmon Legendaris sebagai sumber tenaga…” kata Ben pelan.
+“Itu bisa mengubah keseimbangan dunia.”
+Akechi menatap Astra Link di pergelangan tangannya.
+Suara Gon kembali terngiang di ingatannya.
+Jadilah kuat. Cari tahu tentang Mosmon Legendaris.
+Akechi mengepalkan tangannya.
+Sekarang ia mulai mengerti.
+Petualangan ini mungkin bukan hanya tentang memenuhi misi Gon.
+Tapi juga tentang mencegah orang-orang yang salah mendapatkan kekuatan yang terlalu besar.
+Di kejauhan, langit senja berwarna merah gelap.
+Dan tanpa Akechi sadari…
+Seseorang dari kelompok Hexio Dimension sebenarnya sudah melihatnya tadi.
+</p>
+
+</div>
+
+</div>
+
+<!-- BAB 6 -->
+
+<div class="chapter">
+
+<button class="chapter-btn">
+BAB 6 - Denting Evolusi
+</button>
+
+<div class="chapter-content">
+
+<p>
+Langit mulai gelap ketika percakapan antara Akechi dan Ben masih berlanjut di bengkel tua milik kakek Zai.
+Lampu gantung bergoyang pelan tertiup angin malam. Cahaya kuningnya memantul pada potongan besi yang berserakan di meja kerja.
+Ben bersandar di kursi kayu, tangannya terlipat sambil berpikir keras.
+Florantis berdiri di dekat pintu bengkel, daun besar di punggungnya bergerak perlahan seperti bernapas bersama angin malam.
+“Kalau organisasi itu benar-benar berburu Mosmon Legendaris,” kata Ben pelan, “kita tidak bisa cuma menunggu informasi datang.”
+Akechi duduk di atas meja kerja, memutar screwdriver di tangannya.
+“Terus menurutmu kita harus apa?”
+Ben menatapnya dengan ekspresi serius.
+“Kita buat kelompok.”
+Akechi mengerutkan alis.
+“Kelompok?”
+“Iya. Dunia ini berubah terlalu cepat. Mosmon bermunculan di mana-mana. Orang-orang mulai menangkap mereka, melatih mereka, bahkan memperdagangkannya.”
+Ben menunjuk keluar jendela.
+“Artinya akan ada banyak orang yang menjelajah. Banyak yang menemukan hal-hal baru.”
+Ia berhenti sebentar lalu melanjutkan,
+“Kalau kita punya kelompok… jaringan informasi kita akan jauh lebih luas. Kita bisa saling berbagi data tentang Mosmon, wilayah baru, bahkan mungkin tentang Mosmon Legendaris.”
+Akechi terdiam.
+Ide itu terdengar masuk akal.
+Namun sebelum ia sempat menjawab, suara logam keras tiba-tiba terdengar dari lantai bengkel.
+CLANG!
+Scrapbit terjatuh.
+Tubuh kecil Mosmon logam itu bergetar hebat.
+“Scrapbit?” Akechi langsung melompat turun.
+Scrapbit terlihat gelisah. Cakar logamnya menggores lantai tanpa arah. Matanya yang biasanya stabil kini berkedip-kedip tidak teratur.
+“Kenapa dia?” Ben mendekat cepat.
+Florantis ikut bergerak mendekat dengan waspada.
+Tiba-tiba Scrapbit mengeluarkan suara keras seperti mesin yang kelebihan tenaga.
+Tubuhnya bersinar samar.
+“Ini tidak normal,” kata Ben.
+Akechi langsung mengangkat screwdriver dan mengarahkannya.
+Cahaya scan muncul.
+Namun kali ini layar analisis tidak stabil.
+Tulisan yang muncul terus berubah.
+[SCAN AKTIF]
+Nama: Scrapbit
+Elemen: Metal
+Level: 6
+Status: —
+Status: —
+Status: ERROR
+Energi Inti: Tidak Stabil
+“Kenapa datanya kacau?” Akechi bergumam panik.
+Scrapbit tiba-tiba menjerit pendek.
+Tubuhnya memancarkan cahaya logam terang… lalu—
+BUK!
+Ia jatuh tak bergerak.
+Sunyi memenuhi bengkel.
+Akechi langsung berlutut.
+“Scrapbit!”
+Ia mengangkat tubuh kecil Mosmon itu. Tidak ada respon.
+Ben segera memeriksa tubuhnya dengan hati-hati.
+Beberapa detik berlalu sebelum Ben menarik napas panjang.
+“Dia masih hidup.”
+Akechi sedikit lega.
+“Terus kenapa dia pingsan?”
+Ben berpikir sejenak sambil melihat lagi hasil scan yang masih berkedip di screwdriver.
+“Energi inti tidak stabil… status tidak terbaca….”
+Ben mengangkat kepala.
+“Aku pernah membaca teori tentang ini.”
+“Teori apa?”
+Ben menunjuk Scrapbit.
+“Mungkin… dia sedang berevolusi.”
+Akechi terdiam.
+“Evolusi?”
+“Mosmon tidak selalu berubah secara perlahan,” jelas Ben. “Kadang ketika energi mereka sudah cukup kuat, tubuh mereka akan mengalami transformasi besar.”
+Florantis mengeluarkan suara pelan, seolah setuju.
+“Tapi biasanya proses itu terjadi ketika mereka berada dalam kondisi tertentu,” lanjut Ben.
+“Pertarungan besar. Tekanan energi tinggi. Atau ikatan kuat dengan pemiliknya.”
+Akechi menatap Scrapbit yang masih tidak bergerak.
+“Apa itu berarti dia akan berubah?”
+Ben mengangkat bahu.
+“Bisa jadi.”
+“Bisa juga tidak.”
+“Karena kita belum benar-benar mengerti sistem dunia ini.”
+Lampu bengkel kembali bergoyang pelan.
+Untuk beberapa saat, mereka hanya menunggu.
+Scrapbit masih terbaring.
+Namun samar-samar, di sela-sela logam tubuhnya… cahaya kecil mulai berdenyut.
+Pelan.
+Seperti jantung yang sedang belajar berdetak lebih kuat.
+Ben tersenyum tipis.
+“Aku rasa kita tidak perlu menunggu lama untuk tahu jawabannya.”
+Akechi menggenggam screwdriver lebih erat.
+Jika ini benar-benar evolusi…
+Maka ini akan menjadi langkah besar pertama bagi Scrapbit.
+Dan mungkin juga bagi perjalanan mereka.
+Di luar bengkel, angin malam berhembus semakin dingin.
+Dunia Mosmon terus berubah.
+Dan Akechi baru saja menyentuh salah satu rahasia terbesarnya.
+</p>
+
+</div>
+
+</div>
+
+<!-- BAB 7 -->
+
+<div class="chapter">
+
+<button class="chapter-btn">
+BAB 7 - Cahaya dari Batu Bintang
+</button>
+
+<div class="chapter-content">
+
+<p>
+Bab 7 – Cahaya dari Batu Bintang
+Tiga hari telah berlalu sejak Scrapbit tiba-tiba pingsan di bengkel.
+Selama tiga hari itu juga, tidak ada perubahan.
+Tubuh kecil Mosmon logam itu masih terbaring di meja kerja, seperti mesin yang kehilangan tenaga. Cahaya di sela-sela logam tubuhnya kadang berdenyut pelan, tapi tidak pernah benar-benar bangun.
+Akechi mulai gelisah.
+Ia sudah memindai Scrapbit berkali-kali menggunakan screwdriver, namun hasilnya selalu sama.
+Status tidak stabil.
+Energi inti tidak terbaca.
+Ben mencoba menenangkan keadaan, tapi bahkan dia sendiri terlihat bingung.
+“Kalau ini benar evolusi,” katanya suatu pagi, “prosesnya mungkin butuh waktu.”
+“Tapi tiga hari?” Akechi bergumam.
+Ben tidak menjawab.
+Pagi itu, untuk menghilangkan kegelisahan, Akechi memutuskan berjalan keluar rumah.
+Udara pagi terasa dingin. Kabut tipis masih menyelimuti tanah di sekitar rumah mereka yang berada di pinggiran desa.
+Ia berjalan tanpa tujuan, menyusuri area berbatu kecil di belakang rumah.
+Saat itulah matanya menangkap sesuatu yang aneh.
+Di antara batu-batu biasa, ada dua batu kecil yang terlihat identik.
+Warnanya kebiruan dengan kilau samar di permukaannya.
+Namun yang membuat Akechi berhenti adalah aura yang terasa aneh.
+Batu itu… seperti memancarkan energi.
+Akechi berjongkok dan mengambilnya.
+Begitu tangannya menyentuh batu itu, ia merasakan sensasi hangat merambat di telapak tangannya.
+“Aneh…”
+Batu itu terasa ringan, tapi energi di dalamnya terasa padat.
+Beberapa detik ia hanya menatapnya.
+Lalu pikiran tentang Scrapbit kembali muncul.
+Mosmonnya masih belum bangun.
+Tanpa benar-benar berpikir panjang, Akechi berdiri dan berjalan kembali ke rumah.
+Di dalam bengkel, Scrapbit masih terbaring di meja logam.
+Ben sedang membaca buku tebal tentang Mosmon ketika Akechi masuk.
+“Kamu dari mana?” tanya Ben tanpa melihat.
+Akechi tidak menjawab.
+Ia hanya menatap Scrapbit.
+“Tiga hari sudah cukup lama,” gumamnya pelan.
+Akechi membuka telapak tangannya, memperlihatkan dua batu biru aneh itu.
+“Aku menemukan ini di belakang rumah.”
+Ben akhirnya mengangkat kepala.
+“Batu?”
+“Aura energinya aneh.”
+Akechi berjalan mendekati Scrapbit.
+“Kalau energi Scrapbit tidak stabil…”
+Ia menatap batu itu.
+“Mungkin ini bisa membantu.”
+Ben langsung berdiri.
+“Tunggu, Akechi—”
+Tapi Akechi sudah membuat keputusan.
+Ia mengambil salah satu batu dan perlahan meletakkannya ke celah logam di tubuh Scrapbit.
+Awalnya tidak terjadi apa-apa.
+Lalu tiba-tiba—
+Cahaya biru meledak keluar dari tubuh Scrapbit.
+“APA—?!” Ben mundur kaget.
+Energi terang memenuhi bengkel.
+Tubuh Scrapbit mulai berubah.
+Logam kecil yang sebelumnya membentuk tubuhnya mulai bergerak, melebar, menyusun ulang dirinya sendiri.
+Bagian kaki memanjang.
+Bahunya melebar.
+Potongan logam kecil menyatu menjadi lapisan pelindung seperti armor ksatria.
+Cahaya semakin terang.
+Akechi terpaksa menutup matanya.
+Beberapa detik kemudian…
+Cahaya itu perlahan menghilang.
+Ketika Akechi membuka matanya kembali—
+Seseorang berdiri di depan meja bengkel.
+Tingginya hampir sama dengan manusia dewasa.
+Tubuhnya dilapisi armor logam berkilau dengan garis energi biru di sela-selanya. Bentuknya ramping tapi kokoh, seperti ksatria mekanik.
+Wajahnya masih memiliki ciri Scrapbit, tapi jauh lebih tajam.
+Dan yang paling mengejutkan—
+Matanya bergerak.
+Makhluk itu menundukkan kepala sedikit.
+Lalu berkata dengan suara dalam namun tenang.
+“…Tuan Akechi.”
+Sunyi memenuhi bengkel.
+Akechi membeku.
+Ben bahkan terlihat seperti lupa bernapas.
+“Dia… bicara?” Ben akhirnya berkata pelan.
+Akechi dengan gemetar mengangkat screwdriver.
+“Scan.”
+Cahaya analisis muncul.
+Kali ini layar tidak error.
+Data yang muncul membuat mata Akechi membesar.
+[SCAN AKTIF]
+Nama: Scrapknight
+Tipe: Metal
+Level: 24
+Status: Stabil
+Kemampuan Baru:
+- Steel Guard
+- Pulse Blade
+- Adaptive Armor
+Akechi berkedip.
+Levelnya…
+Naik empat kali lipat dari sebelumnya.
+“Ini gila…” gumamnya.
+Ben berjalan mendekat dengan wajah tidak percaya.
+“Bagaimana bisa evolusi sebesar ini terjadi…?”
+Akechi lalu menunjukkan batu biru yang masih tersisa di tangannya.
+“Aku memasukkan batu ini ke tubuh Scrapbit.”
+Ben langsung mengambil buku yang tadi ia baca dan membalik halaman dengan cepat.
+Beberapa detik kemudian ia berhenti.
+Matanya membesar.
+“Tidak mungkin…”
+Akechi menatapnya.
+“Apa?”
+Ben menunjukkan halaman buku itu.
+Di sana terdapat gambar batu yang sama.
+Judulnya tertulis besar.
+STAR ROCK
+Ben membaca pelan.
+“Batu energi langka yang mampu memicu evolusi paksa pada Mosmon.”
+Ia menatap Scrapknight yang kini berdiri dengan tenang di depan mereka.
+“Namun kemungkinan berhasilnya sangat kecil.”
+Akechi menatap batu yang tersisa di tangannya.
+“Jadi… ini keberuntungan?”
+Ben menggeleng perlahan.
+“Atau mungkin…”
+Ia menatap Akechi dengan ekspresi serius.
+“Mosmonmu memang memiliki potensi evolusi yang sangat besar sejak awal.”
+Scrapknight kemudian berlutut dengan satu kaki seperti seorang ksatria.
+“Tuan Akechi.”
+“Aku siap bertarung kembali.”
+Akechi menatap Mosmonnya.
+Dari makhluk kecil berbentuk logam…
+Sekarang berubah menjadi ksatria metal hidup.
+Perjalanan mereka baru saja berubah arah.
+Dan tanpa mereka sadari—
+Energi dari evolusi itu telah memancarkan gelombang besar ke sekitarnya.
+Gelombang yang… mungkin saja bisa dirasakan oleh pihak Hexio Dimension.
+Masalah besar sering dimulai dari satu keputusan kecil.
+Dan Akechi baru saja membuat salah satunya.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- BAB 8 -->
+
+<div class="chapter">
+
+<button class="chapter-btn">
+BAB 8 - Rekan Baru
+</button>
+
+<div class="chapter-content">
+
+<p>
+Pagi itu terasa jauh lebih tenang dibanding beberapa hari sebelumnya.
+Tidak ada ledakan cahaya.
+Tidak ada energi aneh yang memenuhi bengkel.
+Hanya suara logam yang saling bersentuhan pelan.
+Di halaman rumah, Scrapknight berdiri tegak di bawah sinar matahari pagi.
+Tubuhnya sekarang jauh berbeda dari Scrapbit yang dulu kecil dan lincah. Armor logamnya berkilau dengan garis energi biru yang bergerak seperti aliran listrik halus di sela-sela pelindungnya.
+Akechi berdiri di depannya sambil memegang screwdriver.
+“Baik… kita coba lagi.”
+Scrapknight mengangguk pelan.
+“Siap, Tuan Akechi.”
+Ben yang berdiri di dekat pagar masih terlihat belum sepenuhnya terbiasa melihat Mosmon yang bisa berbicara.
+“Setiap kali dia memanggilmu ‘tuan’, aku masih merasa ini aneh,” gumamnya.
+Akechi hanya tertawa kecil.
+“Serang batu itu,” perintahnya.
+Scrapknight mengangkat tangan kanannya.
+Bagian lengannya berubah sedikit. Logam di sekitarnya bergeser membentuk semacam bilah energi.
+Pulse Blade aktif.
+Dalam satu gerakan cepat—
+CRAAACK!
+Batu besar di depan mereka terbelah dua.
+Ben bersiul pelan.
+“Baiklah… itu jelas peningkatan yang tidak kecil.”
+Akechi mengangkat screwdriver.
+“Scan.”
+Cahaya analisis muncul kembali.
+Data Scrapknight tampil lebih stabil dari sebelumnya.
+[SCAN AKTIF]
+Nama: Scrapknight
+Tipe: Metal
+Level: 24
+Role: Fighter
+Kemampuan:
+- Steel Guard 
+- Pulse Blade
+- Adaptive Armor
+Akechi membaca data itu dengan serius.
+“Role: Fighter…”
+Ben menyilangkan tangan.
+“Masuk akal. Bentuk tubuhnya sekarang seperti ksatria. Kemampuannya jelas difokuskan untuk pertarungan jarak dekat.”
+Scrapknight berdiri tegap.
+“Tubuh saya dirancang untuk melindungi dan menyerang secara efisien.”
+Ben menatapnya beberapa detik.
+“Dia juga terdengar seperti buku strategi berjalan.”
+Akechi tertawa kecil lagi.
+Untuk pertama kalinya sejak semua kekacauan beberapa hari terakhir, suasana terasa… ringan.
+Siang harinya, Akechi dan Ben pergi ke desa.
+Mereka memutuskan berjalan ke pasar trainer kecil yang mulai terbentuk sejak dunia berubah.
+Di sana, orang-orang mulai bertukar informasi tentang Mosmon.
+Beberapa menjual peralatan.
+Beberapa memperlihatkan Mosmon mereka.
+Beberapa bahkan sudah mulai melakukan pertarungan kecil untuk latihan.
+“Dunia ini berubah cepat,” kata Ben pelan.
+Akechi mengangguk.
+Saat mereka berjalan melewati lapangan kecil di tengah pasar, dua trainer sedang bertarung.
+Mosmon api kecil melawan Mosmon air berbentuk kura-kura.
+Scrapknight berdiri di belakang Akechi, memperhatikan dengan tenang.
+“Banyak orang mulai melatih Mosmon,” kata Akechi.
+“Dan itu berarti kita tidak sendirian lagi,” jawab Ben.
+Tiba-tiba seseorang mendekati mereka.
+Seorang pemuda dengan rambut cokelat acak-acakan dan jaket biru tua.
+Di bahunya duduk Mosmon kecil berbentuk tupai listrik.
+Pemuda itu menatap Scrapknight dengan mata berbinar.
+“Wow… Mosmonmu keren sekali.”
+Akechi sedikit terkejut.
+“Terima kasih.”
+Pemuda itu tersenyum lebar.
+“Namaku Riven.”
+Ia menunjuk Mosmon di bahunya.
+“Ini partnerku, Voltchi.”
+Voltchi melompat turun dan mengibaskan ekornya yang dipenuhi percikan listrik kecil.
+“Chi!”
+Riven kemudian menatap Akechi lagi.
+“Aku belum pernah melihat Mosmon seperti itu sebelumnya.”
+Scrapknight sedikit menundukkan kepala.
+“Saya adalah Scrapknight.”
+Riven terlihat makin terkejut.
+“Dia… bicara?!”
+Ben menahan tawa kecil.
+“Kami juga butuh waktu untuk terbiasa.”
+Riven menggaruk belakang kepalanya.
+“Aku sebenarnya sedang mencari kelompok trainer untuk menjelajah wilayah luar desa.”
+Ia menatap Akechi dengan serius.
+“Aku dengar banyak Mosmon kuat muncul di sana.”
+Ben dan Akechi saling pandang.
+Ben lalu berkata pelan,
+“Kita memang sedang berpikir untuk membentuk kelompok kecil.”
+Mata Riven langsung berbinar.
+“Serius?”
+“Kalau begitu… boleh aku ikut?”
+Akechi menatap Scrapknight sebentar.
+Scrapknight hanya berkata singkat.
+“Semakin banyak sekutu terpercaya, semakin tinggi peluang bertahan hidup.”
+Akechi akhirnya tersenyum.
+“Baiklah.”
+Riven langsung mengangkat tangannya senang.
+“YES! Akhirnya aku punya tim!”
+Voltchi melompat-lompat di tanah dengan percikan listrik kecil.
+Ben menggeleng pelan sambil tersenyum.
+Kelompok kecil mereka akhirnya mulai terbentuk.
+Tidak ada yang menyadari bahwa langkah sederhana ini—
+bertemu seorang trainer baru di pasar kecil—
+akan menjadi awal dari petualangan yang jauh lebih besar.
+Dan mungkin juga…
+membawa mereka semakin dekat dengan rahasia Mosmon Legendaris.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MUSIC -->
+
+<audio id="bg-music" autoplay loop>
+<source src="c:\Users\rizky eka prasetio\Downloads\Celtic Music - Fantasy Worlds Through Flute Sounds _ Relaxing Medieval Music Mix for Work & Study, - (192 Kbps) (1).mp3" type="audio/mp3">
+</audio>
+
+<button id="music-btn">
+🔊 Music ON
+</button>
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 MOSMON Universe | Created by Ryu
+
+</footer>
+
+<!-- SCRIPT -->
+
+<script>
+
+/* CHAPTER */
+
+const buttons =
+document.querySelectorAll(".chapter-btn");
+
+buttons.forEach(button => {
+
+button.addEventListener("click", () => {
+
+const content =
+button.nextElementSibling;
+
+if(content.style.maxHeight){
+
+content.style.maxHeight = null;
+
+}else{
+
+content.style.maxHeight =
+content.scrollHeight + "px";
+
+}
+
+});
+
+});
+
+/* MUSIC */
+
+const music =
+document.getElementById("bg-music");
+
+const musicBtn =
+document.getElementById("music-btn");
+
+let playing = true;
+
+musicBtn.addEventListener("click", () => {
+
+if(playing){
+
+music.pause();
+
+musicBtn.innerHTML =
+"🔈 Music OFF";
+
+playing = false;
+
+}else{
+
+music.play();
+
+musicBtn.innerHTML =
+"🔊 Music ON";
+
+playing = true;
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
